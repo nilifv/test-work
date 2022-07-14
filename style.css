@@ -1,0 +1,327 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url("fonts/SF-Pro-Display-Light.woff") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url("fonts/SF-Pro-Display-LightItalic.woff") format("woff2");
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.page-header {
+    background-color: #262626;
+}
+
+.header-wrapper {
+    height: 111px;
+    max-width: 1205px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-tel,
+.header-mail {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    position: relative;
+}
+
+.header-tel::after,
+.header-mail::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 0;
+    left: -36px;
+    background-color: #858585;
+    border-radius: 50%;
+}
+
+.header-tel::after {
+    background-image: url(images/tel.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header-mail::after {
+    background-image: url(images/mail.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header-tel {
+    margin-bottom: 17px;
+}
+
+.header-mail {
+    display: flex;
+    flex-direction: column;
+}
+
+.mail-text {
+    font-family: 'SF Pro Display';
+    font-style: italic;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.buy-host {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buy-host-link {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #fff;
+    letter-spacing: 0.035em;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 232px;
+    height: 44px;
+    background: #67A8D2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin-right: 36px;
+}
+
+.account {
+    display: block;
+    width: 44px;
+    height: 44px;
+    background: #67A8D2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    background-image: url(images/account.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    padding: 0 15px;
+    max-width: 1205px;
+    margin: 16px auto 18px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #262626;
+    text-transform: uppercase;
+}
+
+.about-hosting {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(91.05deg, #5994BA 14.15%, #ADCCE0 99%);
+}
+
+.about-hosting-wrapper::before {
+    content: "";
+    position: absolute;
+    background-image: url(images/image-host.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -310px;
+    background-size: contain;
+    z-index: -1;
+}
+
+.about-hosting-wrapper {
+    max-width: 1205px;
+    margin: 0 auto;
+    padding: 0 30px 100px;
+}
+
+.about-hosting-title {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    text-shadow: 3px 1px 0px #3E708F;
+    margin: 0;
+    padding: 0;
+    padding-top: 54px;
+    margin-bottom: 34px;
+}
+
+.combine-box,
+.combine-buy {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #FFFFFF;
+}
+
+.combine-box {
+    margin-bottom: 11px;
+}
+
+.combine-text,
+.combine-text-bold,
+.order-host-text {
+    margin: 0;
+}
+
+.combine-text-bold {
+    font-weight: 700;
+}
+
+.combine-buy {
+    display: flex;
+    position: relative;
+}
+
+.order-host-text {
+    background-color: #1B567C;
+    min-height: 46px;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    padding-right: 30px;
+    z-index: 10;
+    margin-right: 68px;
+    position: relative;
+}
+
+.order-host-text::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40px;
+    left: 157px;
+    background-image: url(images/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.combine-buy::before {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 0;
+    right: 500px;
+    background-color: #FE8572;
+    height: 44px;
+    width: 280px;
+}
+
+.order-host-buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    z-index: 10;
+    min-height: 44px;
+    background-color: #FA6232;
+    box-shadow: 0px 4px 4px rgba(46, 46, 46, 0.27);
+    border-radius: 5px;
+    padding: 7px 32px;
+}
+
+.tariff-wrapper {
+    max-width: 1205px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.tariff-title {
+    margin: 0;
+    padding: 0;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #3C3B3B;
+    display: flex;
+    justify-content: center;
+    margin-top: 94px;
+    margin-bottom: 57px;
+}
+
+.tariff-title-text, .tariff-title-text-one {
+    margin: 0;
+    padding: 0;
+    max-width: 680px;
+}
+
+.tariff-title-text-one {
+    margin-bottom: 30px;
+}
+
