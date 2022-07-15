@@ -49,7 +49,7 @@ body {
     height: 111px;
     max-width: 1205px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +62,9 @@ body {
 }
 
 .header-tel,
-.header-mail {
+.header-mail,
+.footer-tel-text,
+.footer-mail-text {
     text-decoration: none;
     color: #fff;
     font-family: 'SF Pro Display';
@@ -74,7 +76,9 @@ body {
 }
 
 .header-tel::after,
-.header-mail::after {
+.header-mail::after,
+.footer-tel-text::after,
+.footer-mail-text::after {
     content: "";
     position: absolute;
     width: 28px;
@@ -85,13 +89,20 @@ body {
     border-radius: 50%;
 }
 
+.footer-tel-text::after {
+    background-image: url(images/tel.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .header-tel::after {
     background-image: url(images/tel.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.header-mail::after {
+.header-mail::after,
+.footer-mail-text::after {
     background-image: url(images/mail.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -154,7 +165,7 @@ body {
 .nav-list {
     list-style-type: none;
     display: flex;
-    padding: 0 15px;
+    padding: 0 10px;
     max-width: 1205px;
     margin: 16px auto 18px;
     justify-content: space-between;
@@ -173,8 +184,6 @@ body {
 }
 
 .about-hosting {
-    position: relative;
-    z-index: 1;
     background: linear-gradient(91.05deg, #5994BA 14.15%, #ADCCE0 99%);
 }
 
@@ -184,18 +193,19 @@ body {
     background-image: url(images/image-host.svg);
     background-repeat: no-repeat;
     background-position: center;
-    width: 100%;
+    width: 672px;
     height: 100%;
     top: 0;
-    right: -310px;
+    right: 0;
     background-size: contain;
-    z-index: -1;
+    z-index: 1;
 }
 
 .about-hosting-wrapper {
     max-width: 1205px;
     margin: 0 auto;
-    padding: 0 30px 100px;
+    padding: 0 10px 100px;
+    position: relative;
 }
 
 .about-hosting-title {
@@ -293,35 +303,421 @@ body {
     padding: 7px 32px;
 }
 
-.tariff-wrapper {
-    max-width: 1205px;
-    padding: 0 30px;
-    margin: 0 auto;
+.support-host {
+    background: linear-gradient(to bottom right, rgba(102, 166, 209, 0.1) 50%, rgba(102, 166, 209, 0.2) 50%);
+    margin-bottom: 94px;
 }
 
-.tariff-title {
-    margin: 0;
-    padding: 0;
-    font-family: 'SF Pro Display';
-    font-style: normal;
-    font-weight: 700;
+
+.support-host-wrapper {
+    max-width: 1205px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.support-host-title {
     font-size: 48px;
     line-height: 150%;
     letter-spacing: 0.04em;
     color: #3C3B3B;
     display: flex;
     justify-content: center;
-    margin-top: 94px;
+    margin: 0;
+    padding: 0;
+    padding-top: 48px;
     margin-bottom: 57px;
 }
 
-.tariff-title-text, .tariff-title-text-one {
+.support-host-text {
+    color: #3C3B3B;
     margin: 0;
     padding: 0;
-    max-width: 680px;
+    margin-bottom: 70px;
 }
 
-.tariff-title-text-one {
+.support-host-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 86px;
+}
+
+.support-host-item {
+    width: 170px;
+    height: 60px;
+    list-style-type: none;
+    margin-bottom: 60px;
+}
+
+.support-host-item:not(:nth-child(5n)) {
+    margin-right: 50px;
+}
+
+.support-host-link {
+    background-image: url(images/host-1.svg);
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+
+.one-c {
+    background-image: url(images/host-1.svg);
+}
+
+.wp {
+    background-image: url(images/wp.svg);
+}
+
+.joomla {
+    background-image: url(images/joomla.svg);
+}
+
+.modx {
+    background-image: url(images/modx.svg);
+}
+
+.opencart {
+    background-image: url(images/opencart.svg);
+}
+
+.umi {
+    background-image: url(images/umi.svg);
+}
+
+.hostcms {
+    background-image: url(images/hostcms.svg);
+}
+
+.drupal {
+    background-image: url(images/drupal.svg);
+}
+
+.cms {
+    background-image: url(images/cms.svg);
+}
+
+.netcat {
+    background-image: url(images/netcat.svg);
+}
+
+.php {
+    background-image: url(images/php.svg);
+}
+
+.shop-script {
+    background-image: url(images/shop-script.svg);
+}
+
+.dle {
+    background-image: url(images/dle.svg);
+}
+
+.prestashop {
+    background-image: url(images/prestashop.svg);
+}
+
+.ssl {
+    max-width: 1205px;
+    margin: 0 auto;
+    padding: 0 10px 100px;
+}
+
+.ssl-title {
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+    letter-spacing: 0.04em;
+    color: #3C3B3B;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 57px;
+}
+
+.ssl-text {
+    max-width: 730px;
+    margin: 0;
+}
+
+.ssl-text-one {
+    margin-bottom: 15px;
+}
+
+.ssl-catalog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    padding: 0;
+    gap: 20px;
+}
+
+.ssl-catalog-item {
+    width: 280px;
+    background: rgba(103, 168, 210, 0.1);
+    border: 1px solid rgba(103, 168, 210, 0.3);
+    box-shadow: 0px 4px 4px rgba(183, 183, 183, 0.43);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.ssl-catalog-item::before {
+    content: '1';
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    width: 100%;
+    height: 100%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 150%;
+    color: #67A8D2;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.item-two::before {
+    content: "2";
+}
+
+.item-three::before {
+    content: "3";
+}
+
+.item-for::before {
+    content: "4";
+}
+
+.ssl-catalog-title {
+    margin: 56px auto 75px;
+    text-align: center;
+    font-weight: 600;
+    color: #1B567C;
+    width: 191px;
+    position: relative;
+}
+
+.ssl-catalog-title::before {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 0.5px;
+    bottom: -45px;
+    left: 0;
+    background-color: #1B567C;
+}
+
+.ssl-catalog-text {
+    font-size: 16px;
+    line-height: 260%;
+    text-align: center;
+    color: #3C3B3B;
+    display: block;
+    margin: 0;
+    margin-bottom: 70px;
+    padding: 0 10px;
+}
+
+.ssl-price {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
     margin-bottom: 30px;
 }
 
+.ssl-rub {
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #1B567C;
+    margin-right: 11px;
+}
+
+.ssl-inyear {
+    margin: 0;
+    color: #1B567C;
+}
+
+.footer {
+    background-color: #262626;
+}
+
+.footer-wrapper {
+    max-width: 1205px;
+    margin: 89px auto 0;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-text {
+    font-size: 16px;
+    color: #858585;
+    margin: 0;
+}
+
+.footer-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-company {
+    width: 215px;
+}
+
+.about-company-title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+    color: #858585;
+}
+
+.about-company-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.about-company-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    line-height: 150%;
+}
+
+.footer-tel-number,
+.footer-mail,
+.footer-address-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+}
+
+.footer-mail-text,
+.footer-tel-text,
+.footer-address-text {
+    position: relative;
+    color: #858585;
+    font-size: 16px;
+}
+
+.footer-address-text::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 0;
+    left: -36px;
+    background-color: #858585;
+    border-radius: 50%;
+    background-image: url(images/geolocation.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer-info {
+    margin-right: 86px;
+    max-width: 499px;
+}
+
+.footer-contacts {
+    margin-right: 30px;
+    max-width: 360px;
+}
+
+.footer-info-text {
+    font-size: 16px;
+    color: #fff;
+}
+
+.footer-social-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-bottom: 48px;
+}
+
+.footer-social-item {
+    margin: 0;
+    margin-right: 20px;
+}
+
+.footer-social-link {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    background: linear-gradient(90deg, #7CB4D8 0%, rgba(191, 230, 255, 0) 100%);
+}
+
+.twitter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/twitter.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.inst::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/inst.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.vk::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/vk.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fb::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/fb.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer-button {
+    width: 91px;
+    height: 31px;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #FFFFFF;
+    background: #67A8D2;
+    border-radius: 5px;
+    border: none;
+    margin-left: auto;
+    display: flex;
+}
